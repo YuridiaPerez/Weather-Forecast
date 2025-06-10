@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>European Weather Forecast - Plan Your Perfect Trip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-umbrella-beach"></i> European Travel Weather</h1>
+            <p class="subtitle">Plan your perfect European getaway with our 7-day weather forecast</p>
+        </header>
+
+        <div class="search-section">
+            <form id="weather-form">
+                <div class="input-group">
+                    <input type="text" id="city" list="european-cities" placeholder="Enter a European city...">
+                    <datalist id="european-cities">
+                        <option value="Paris, France">
+                        <option value="London, UK">
+                        <option value="Rome, Italy">
+                        <option value="Barcelona, Spain">
+                        <option value="Amsterdam, Netherlands">
+                        <option value="Berlin, Germany">
+                        <option value="Prague, Czech Republic">
+                        <option value="Vienna, Austria">
+                        <option value="Athens, Greece">
+                        <option value="Venice, Italy">
+                        <option value="Dublin, Ireland">
+                        <option value="Stockholm, Sweden">
+                        <option value="Copenhagen, Denmark">
+                        <option value="Lisbon, Portugal">
+                        <option value="Madrid, Spain">
+                    </datalist>
+                    <button type="submit"><i class="fas fa-search"></i> Check Weather</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="popular-cities">
+            <h2>Popular Destinations</h2>
+            <div class="city-buttons">
+                <button class="city-btn" data-city="Paris, France">Paris</button>
+                <button class="city-btn" data-city="Rome, Italy">Rome</button>
+                <button class="city-btn" data-city="Barcelona, Spain">Barcelona</button>
+                <button class="city-btn" data-city="Amsterdam, Netherlands">Amsterdam</button>
+                <button class="city-btn" data-city="London, UK">London</button>
+            </div>
+        </div>
+
+        <div id="forecast"></div>
+
+        <div id="travel-tips" class="hidden">
+            <h2>Travel Tips</h2>
+            <div class="tips-content"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

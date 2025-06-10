@@ -1,0 +1,354 @@
+:root {
+    --primary-color: #2196F3;
+    --secondary-color: #FFA000;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --border-radius: 8px;
+}
+
+/* Base styles - Mobile First Approach */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f5fe;
+    margin: 0;
+    padding: 10px;
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.8em;
+    word-wrap: break-word;
+}
+
+.subtitle {
+    color: #666;
+    margin-top: 10px;
+    font-size: 1em;
+    padding: 0 15px;
+}
+
+.search-section {
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1976D2;
+}
+
+.popular-cities {
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.popular-cities h2 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.city-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    justify-content: center;
+}
+
+.city-btn {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+#forecast {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.city-header {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.4em;
+    margin: 0 0 15px 0;
+    color: var(--primary-color);
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.forecast-item {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.forecast-item:hover {
+    transform: translateY(-3px);
+}
+
+.forecast-item h3 {
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+}
+
+.forecast-item p {
+    margin: 8px 0;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.weather-icon {
+    font-size: 1.8em;
+    margin: 10px 0;
+    color: var(--secondary-color);
+}
+
+.error {
+    color: #d32f2f;
+    background-color: #ffebee;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin: 15px 0;
+    text-align: center;
+    border-left: 4px solid #d32f2f;
+    font-size: 0.9em;
+}
+
+#travel-tips {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+}
+
+#travel-tips h2 {
+    color: var(--primary-color);
+    margin: 0 0 15px 0;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.tips-content {
+    line-height: 1.6;
+    font-size: 0.9em;
+}
+
+.tip-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.extra-tip {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    font-style: italic;
+}
+
+/* Tablet Breakpoint */
+@media (min-width: 600px) {
+    body {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .input-group {
+        flex-direction: row;
+    }
+
+    button {
+        width: auto;
+    }
+
+    .city-buttons {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Desktop Breakpoint */
+@media (min-width: 900px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .subtitle {
+        font-size: 1.1em;
+    }
+
+    .city-buttons {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .forecast-item {
+        padding: 20px;
+    }
+
+    .weather-icon {
+        font-size: 2.2em;
+    }
+}
+
+/* Large Desktop Breakpoint */
+@media (min-width: 1200px) {
+    .container {
+        padding: 40px;
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .city-buttons {
+        gap: 20px;
+    }
+
+    .forecast-item:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .search-section,
+    .popular-cities,
+    button {
+        display: none;
+    }
+
+    .forecast-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #0000EE;
+        --secondary-color: #8B0000;
+        --text-color: #000000;
+    }
+
+    .forecast-item,
+    .tip-card {
+        border: 2px solid #000;
+    }
+
+    .error {
+        border: 2px solid #FF0000;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .forecast-item {
+        transition: none;
+    }
+
+    .forecast-item:hover {
+        transform: none;
+    }
+}
+
